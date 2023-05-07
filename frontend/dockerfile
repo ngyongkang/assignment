@@ -1,0 +1,10 @@
+# syntax=docker/dockerfile:1
+   
+FROM node:18-alpine
+WORKDIR /app
+COPY . .
+ARG PORT=3000
+ENV PORT $PORT
+EXPOSE $PORT
+RUN yarn install --production
+CMD ["npm", "start"]
