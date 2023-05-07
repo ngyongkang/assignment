@@ -51,6 +51,7 @@ module.exports = (function() {
                             if(!json.data.some(element => element.id === dataObject.id || element.login === dataObject.login ))
                                 json.data.push(dataObject);
                             else {
+                                //Else condition then insert data into the proper slot of the json database.
                                 let index = json.data.findIndex((element) => element.id === dataObject.id);
                                 console.log("Located ID:",json.data[index]);
                                 json.data[index] = dataObject;
@@ -63,11 +64,10 @@ module.exports = (function() {
             .on("end", () => {
                 console.log(json);
                 fs.writeFileSync("database.json", JSON.stringify(json, null, 4));
-                res.send(json).status(200);
             });
         })
 
-        
+        res.send(json).status(200);
     });
 
     return app;

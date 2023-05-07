@@ -47,6 +47,12 @@
             "login": "basilisk",
             "name": "Basilisk",
             "salary": -23.43
+        },
+        {
+            "id": "e0001",
+            "login": "hpotter",
+            "name": "Harry Potter",
+            "salary": 1234
         }
     ]
 }

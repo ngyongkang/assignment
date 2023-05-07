@@ -16,8 +16,6 @@ const StyledTextField = styled(TextField)`
 	width: 30%;
 `;
 
-
-
 function App() {
   const [users, setUsers] = useState([]);
   // const [searchWord, setSearchWord] = useState("");
